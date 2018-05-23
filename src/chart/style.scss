@@ -1,0 +1,75 @@
+$goodColor: rgb(0, 228, 0);
+$badColor: rgb(255, 0, 0);
+$selectColor: rgb(0, 140, 255);
+$goalColor: rgb(55, 0, 255);
+
+#chartSvg {
+    text {
+        font-family: Arial;
+        font-size: 20px;
+    }
+
+    .points circle {
+        fill: rgb(0, 0, 0);
+    }
+
+    .points circle:hover {
+        fill: $selectColor;
+    }
+
+    .lineSegments line {
+        stroke-width: 10;
+    }
+
+    .lineSegments line:hover {
+        stroke: $selectColor;
+    }
+
+    .points circle.selected {
+        fill: $selectColor;
+    }
+
+    .lineSegments line.selected {
+        stroke: $selectColor;
+    }
+
+    .popupBg {
+        fill: rgb(255, 255, 255);
+        opacity: 0.9;
+        pointer-events: none;
+    }
+
+    .axisLine {
+        stroke: rgb(0, 0, 0);
+        stroke-width: 2;
+    }
+
+    .lineSegment.good {
+        stroke: $goodColor;
+    }
+
+    .lineSegment.bad {
+        stroke: $badColor;
+    }
+
+    .popupText {
+        pointer-events: none;
+    }
+
+    .popupText.good {
+        fill: $goodColor;
+    }
+
+    .popupText.bad {
+        fill: $badColor;
+    }
+
+    .goalLine {
+        stroke: $goalColor;
+        stroke-width: 4;
+    }
+
+    .goalText {
+        fill: $goalColor;
+    }
+}

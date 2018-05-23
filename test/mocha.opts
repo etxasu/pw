@@ -1,0 +1,6 @@
+--require babel-core/register
+--require ignore-styles
+--require mock-local-storage
+--require jsdom-global/register
+--require ./test/enzyme_setup
+--exit

@@ -1,0 +1,50 @@
+#friendList {
+    h1 {
+        margin-bottom: 1rem;
+    }
+
+    #mainButtons {
+        margin-bottom: 2rem;
+    }
+
+    #mainButtons button {
+        margin-right: 1rem;
+    }
+
+    #allFriendsCheck {
+        margin-bottom: 1rem;
+    }
+
+    #listItems .form-check-input {
+        margin-left: 0.1rem;
+        margin-top: 0.6rem;
+        transform: scale(1.3);
+        cursor: pointer;
+    }
+
+    #listItems label {
+        font-size: 1.2rem;
+        padding-left: 2rem;
+        cursor: pointer;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    #confirmRemove {
+        margin-bottom: 2rem;
+        display: flex;
+    }
+
+    #confirmRemove span {
+        font-size: 1.2rem;
+        margin-right: 2rem;
+        flex: none;
+    }
+
+    #confirmRemove button {
+        flex: none;
+        margin-right: 1rem;
+    }
+}

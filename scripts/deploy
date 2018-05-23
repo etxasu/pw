@@ -1,0 +1,20 @@
+echo "Closing all screens from root"
+echo "=========="
+sudo screen -ls | grep Detached | awk '{print $1}' | cut -f1 -d'.' | while read in; do sudo screen -X -S $in quit; done 
+
+echo "Making new build"
+echo "=========="
+node_modules/gulp-cli/bin/gulp.js build
+
+echo "Removing previous installation"
+echo "=========="
+sudo rm -rf /opt/carbon_footprint
+
+echo "Copying over new build"
+echo "=========="
+sudo mkdir /opt/carbon_footprint
+sudo cp -a . /opt/carbon_footprint
+
+echo "Running"
+echo "=========="
+sudo screen -d -m -S carbon_footprint bash -c 'cd /opt/carbon_footprint/build && node js/server_main.js'

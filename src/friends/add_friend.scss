@@ -1,0 +1,24 @@
+#addFriend {
+    header {
+        display: flex;
+        margin-bottom: 1rem;
+    }
+
+    header h1 {
+        flex: auto;
+        margin: 0;
+    }
+
+    header button {
+        flex: none;
+    }
+
+    #addableFriends button {
+        width: 5rem;
+        margin-right: 1rem;
+    }
+
+    #addableFriends > div {
+        margin-bottom: 0.5rem;
+    }
+}

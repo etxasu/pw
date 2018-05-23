@@ -1,0 +1,25 @@
+echo "Beginning build"
+echo $BRANCH_NAME
+pwd
+ls
+echo "========================="
+
+echo "Installing dependencies"
+echo "========================="
+sh scripts/install
+
+echo "Running Tests"
+echo "========================="
+sh scripts/test
+
+if [ $? -eq 0 ] && [ "$GIT_BRANCH" = "origin/master" ] ; then
+    echo "Deploying to server"
+    echo "========================="
+    sh scripts/deploy
+else
+    echo "Not deploying"
+    echo "========================="
+fi
+
+echo "Jenkins Build Complete"
+echo "========================="
